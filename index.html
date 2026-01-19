@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Win/Loss Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="counter-container">
+        <span id="wins">0 W</span> - <span id="losses">0 L</span>
+    </div>
+
+    <div id="controls">
+        <button onclick="updateCounter('win_minus')">Win -</button>
+        <button onclick="updateCounter('win_plus')">Win +</button>
+        
+        <span style="margin: 0 15px;">|</span>
+        
+        <button onclick="updateCounter('loss_minus')">Loss -</button>
+        <button onclick="updateCounter('loss_plus')">Loss +</button>
+        
+        <span style="margin: 0 15px;">|</span>
+
+        <button onclick="resetCounter()">Reset (0)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
