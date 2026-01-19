@@ -1,24 +1,28 @@
-# live_win_lose_counter
+# OBS Live Editable Counter
 
-A lightweight, web-based counter for OBS Studio that allows you to change values on the fly without leaving your streaming software.
+A lightweight, web-based counter for OBS Studio. Update your stats live via the OBS "Interact" window.
 
-## Features
-- Direct Interaction: Change the count via the OBS "Interact" window.
-- Zero Latency: Since it's a local HTML file, updates are instantaneous.
-- Customizable: Easy to style via CSS to match your stream overlay.
+## Installation
+1. Download `index.html`, `style.css`, and `script.js`.
+2. In OBS, add a new Browser Source.
+3. Check Local file and select `index.html`.
+4. To update the count: Right-click the source in OBS and select Interact.
 
-## Setup
-1. Download the "index.html" file to your computer.
-2. Open OBS Studio.
-3. Add a new Browser Source.
-4. Check the box Local file and select the downloaded file.
-5. Click OK.
+## 🛠️ Customization
+You can easily customize the look by editing the `style.css` file:
 
-## How to use
-To change the numbers during your stream:
-1. Right-click the counter source in your OBS Sources list.
-2. Select Interact.
-3. Use the buttons to increase or decrease the value.
+### Change Colors
+Look for the following IDs to change the neon green and red colors:
+* `#wins { color: #39FF14; }`
+* `#losses { color: #FF2400; }`
+* `border: 4px solid #e5ff00;` (The main frame color)
+
+### Add a Background Image
+To use a custom image, uncomment the line in `#counter-container` and add your filename:
+`background-image: url('your-image.jpg');`
+
+### Adjust Size
+Change `font-size: 85px;` in the `#counter-container` section to scale the text.
 
 ---
-*Created for streamers who need a simple and reliable way to track stats live.*
+*Minimalistic tool for streamers.*
